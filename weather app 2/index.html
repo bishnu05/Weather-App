@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body{
+            background-size: auto;
+            background-image: url("https://miro.medium.com/max/1400/1*GsImz-edoeuqCMfKxDus0w.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+        #container{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        #map{
+            width: 45%;
+            padding-top: 15px;
+        }
+        #data{
+            width: 50%;
+            
+        }
+        #forcast{
+            margin-top: 15px;
+            display: flex;
+            padding: 15px;
+            width: 80%;
+            margin: auto;
+        }
+        .days{
+           background-color: black;
+           color: white;
+           width: 20%;
+           text-align: center;
+           border-radius: 15px;
+           border: 1px solid yellow;
+        }
+        .days>img{
+           width: 100%;
+           height: 30%;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;color: white;">Weather App.com</h1>
+    <input type="text" id="search" placeholder="Search Your City">
+    <button id="submit" onclick="getData()">Submit</button>
+    <button id="location" onclick="getlocation()">Live Location</button>
+    <div id="container">
+        <!-- box for data and map -->
+          <div id="data">
+           <!-- all data here -->
+          </div>
+          <div id="map">
+              <!-- map box -->
+            <div class="mapouter"><div class="gmap_canvas">
+                <iframe 
+                width="100%" 
+                height="95%" 
+                id="gmap_canvas" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0"
+                marginwidth="0">
+                </iframe>
+            </div> 
+          </div>
+    </div>    
+</div>
+<div id="forcast">
+    <!-- forcast data -->
+</div>
+</body>
+</html>
+<script src="./index.js"></script>
